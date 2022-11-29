@@ -1,11 +1,14 @@
 # IP Project
+
 <br/>
 
 ## Problem Statement
 
-**Dataset:** 
+![Problem Statement](images\ps.png)
 
-[Prostate cANcer graDe Assessment (PANDA) Challenge](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
+**Dataset:**
+
+[![Link to Dataset](images\dt.png "Prostate cANcer graDe Assessment (PANDA) Challenge")](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
 
 ## Background
 
@@ -14,11 +17,10 @@
 The grading process consists of finding and classifying cancer tissue into so-called Gleason patterns (3, 4, or 5) based on the architectural growth patterns of the tumour. After the biopsy is assigned a Gleason score, it is converted into an ISUP grade on a 1-5 scale.
 
 > The Gleason grading system is the most important prognostic marker for PCa, and the ISUP grade has a crucial role when deciding how a patient should be treated.
-> 
 
 There is both a risk of missing cancers and a large risk of over-grading resulting in unnecessary treatment. However, **the system suffers from significant inter-observer variability** between pathologists, limiting its usefulness for individual patients. This **variability in ratings could lead to unnecessary treatment, or worse, missing a severe diagnosis**.
 
-![Example of the Grading process for a tissue sample](IP%20Project%20d98e5c6aabef45ed89d949597a5641c0/Untitled.png)
+![Example of the Grading process for a tissue sample](images\Untitled.png)
 
 Example of the Grading process for a tissue sample
 
@@ -29,7 +31,7 @@ We can improve the accuracy of the process by automating and standardising the r
 1. RGB to GrayScale
 2. Thresholding to convert to Binary Image
 3. Crop Image - using Polynomial Boundary Representation Principle (to reduce
-computation and time)
+   computation and time)
 4. Closing to enhance Gleason pattern
 5. Using Local processing to identify Euler's Number of patches
 6. Create regions using Split And Merge & Euler’s Number
@@ -40,13 +42,13 @@ computation and time)
 
 ### **Link to Notebook: Prostate Cancer Grade Detection**
 
-[Google Colaboratory](https://colab.research.google.com/drive/1GawEscP_l9_8OmZKiKjrpu6GvrMWF389#scrollTo=MZddV8usc6gm)
+[Prostate Cancer Grade Detection Notebook](https://colab.research.google.com/drive/1GawEscP_l9_8OmZKiKjrpu6GvrMWF389#scrollTo=MZddV8usc6gm)
 
 The code generates a segmented tissue sample with an Euler’s score that can be mapped to a Gleason score and ISUP Grade. Illustrated below is a sample output of the above image processing pipeline.
 
 ## Segmented Tissue Sample
 
-![output.png](IP%20Project%20d98e5c6aabef45ed89d949597a5641c0/output.png)
+![Sample output](images\output.png)
 
 ## Further Analysis of Segmented Tissue Sample
 
@@ -76,11 +78,11 @@ Therefore the **ISUP Grade** can be estimated accurately - **3+4 gives Grade 2**
 
 ## Conclusion
 
-1. Using the proposed system we were able to **Enhance the Tissue Sample** and **Identify the Gleason Pattern**. This included performing operations like - RGB to Grayscale conversion, Boundary Detection, Thresholding, Closing, and so on. 
+1. Using the proposed system we were able to **Enhance the Tissue Sample** and **Identify the Gleason Pattern**. This included performing operations like - RGB to Grayscale conversion, Boundary Detection, Thresholding, Closing, and so on.
 2. We **used Local Processing to implement Euler’s Number** in order to establish a consistent measure to map to the Gleason Scoring System.
-3. We **used the  K-Means algorithm for Segmentation**, to Identify regions in the tissue sample. We used a custom parameter - the Euler’s Number, instead of the pixel values for Segmentation. We evaluated different values of K to get the most accurate - neither too generalized nor too many regions. We **identified K=5 as the best value**, (4+1 to account for the background).
+3. We **used the K-Means algorithm for Segmentation**, to Identify regions in the tissue sample. We used a custom parameter - the Euler’s Number, instead of the pixel values for Segmentation. We evaluated different values of K to get the most accurate - neither too generalized nor too many regions. We **identified K=5 as the best value**, (4+1 to account for the background).
 4. On Further Analysis of the 4 region, the **Majority and Minority Gleason Patterns were
-Identified**.
+   Identified**.
 5. Then using a Scoring Index these **Patterns were mapped to correct Gleason Score**.
 6. The **ISUP Grade for the Tissue Sample was Identified**.
 
@@ -90,10 +92,10 @@ Identified**.
 2. Reducing Time and Computationally Complexity without Down Sampling
 3. Converting to Binary Image using the correct Thresholding Approach
 4. Enhancing Gleason Pattern (Evaluating the performance of different Morphological
-Operations)
+   Operations)
 5. Calculating Euler's Score for each Region
 6. Implementing Segmentation using custom value - Euler's Number not the pixel
-values
+   values
 7. Identifying the correct K value for Segmentation
 
 ## Future Scope
