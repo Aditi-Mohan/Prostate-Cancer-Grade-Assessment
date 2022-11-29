@@ -4,11 +4,11 @@
 
 ## Problem Statement
 
-![Problem Statement](images\ps.png)
+![Problem Statement](/images/ps.png)
 
 **Dataset:**
 
-[![Link to Dataset](images\dt.png "Prostate cANcer graDe Assessment (PANDA) Challenge")](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
+[![Link to Dataset](images/dt.png "Prostate cANcer graDe Assessment (PANDA) Challenge")](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
 
 ## Background
 
@@ -48,7 +48,7 @@ The code generates a segmented tissue sample with an Euler’s score that can be
 
 ## Segmented Tissue Sample
 
-![Sample output](images\output.png)
+![Sample output](images/output.png)
 
 ## Further Analysis of Segmented Tissue Sample
 
