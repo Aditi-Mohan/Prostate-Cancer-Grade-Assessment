@@ -8,7 +8,7 @@
 
 **Dataset:**
 
-[![Link to Dataset](images/dt.png "Prostate cANcer graDe Assessment (PANDA) Challenge")](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
+[![Link to Dataset](/images/dt.png "Prostate cANcer graDe Assessment (PANDA) Challenge")](https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/overview)
 
 ## Background
 
@@ -20,7 +20,7 @@ The grading process consists of finding and classifying cancer tissue into so-ca
 
 There is both a risk of missing cancers and a large risk of over-grading resulting in unnecessary treatment. However, **the system suffers from significant inter-observer variability** between pathologists, limiting its usefulness for individual patients. This **variability in ratings could lead to unnecessary treatment, or worse, missing a severe diagnosis**.
 
-![Example of the Grading process for a tissue sample](images\Untitled.png)
+![Example of the Grading process for a tissue sample](/images/Untitled.png)
 
 Example of the Grading process for a tissue sample
 
@@ -48,7 +48,7 @@ The code generates a segmented tissue sample with an Euler’s score that can be
 
 ## Segmented Tissue Sample
 
-![Sample output](images/output.png)
+![Sample output](/images/output.png)
 
 ## Further Analysis of Segmented Tissue Sample
 
